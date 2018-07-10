@@ -1,0 +1,126 @@
+<nav class="navbar is-active" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <h1>
+        PLugdIN
+      </h1>
+      <%= image_tag image_path('folder_1/dplug.png') %>
+    </a>
+
+    <!-- <div> <a role="button" class="navbar-burger is-active" aria-label="menu" aria-expanded="false"> <span aria-hidden="true"></span> <span aria-hidden="true"></span> <span aria-hidden="true"></span> </a> </div> -->
+
+    <div class="move-button">
+      <a class="navbar-item" href="/influencers_path">
+        <a class="button is-primary is-inverted is-outlined" href="/influencers">
+          <span class="icon">
+            <i class="fas fa-bullhorn" aria-hidden="true"></i>
+          </span>
+          <span>Influencers</span>
+        </a>
+      </a>
+    </div>
+    <div class="move-button1">
+      <a class="navbar-item" href="/brands_path">
+        <a class="button is-primary is-inverted is-outlined" href="/brands">
+          <span class="icon">
+            <i class="fab fa-black-tie" aria-hidden="true"></i>
+          </span>
+          <span>Brands</span>
+        </a>
+      </a>
+    </div>
+    <div class="move-button2">
+      <a class="navbar-item" href="/profiles_path">
+        <a class="button is-primary is-inverted is-outlined" href="/profiles">
+          <span class="icon">
+            <i class="fas fa-user-circle" aria-hidden="true"></i>
+          </span>
+          <span>Profile</span>
+        </a>
+      </a>
+    </div>
+    <div class="move-button3">
+      <a class="navbar-item">
+        <a class="button is-primary is-inverted is-outlined">
+          <span class="icon">
+            <i class="fas fa-search" aria-hidden="true"></i>
+          </span>
+          <span>
+            Search
+          </span>
+        </a>
+      </a>
+    </div>
+  </div>
+</nav>
+  <div class="animated fadeIn">
+<div class="image-background">
+  <div class="brands-new">
+    <a class=" index-1 button is-black is-outlined" href="/brands/new">
+      <span class="icon">
+        <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+      </span>
+      <span>Create Your Brand</span>
+    </a>
+    <div class="image-background">
+      <%= image_tag image_path('folder_1/brainstorm.jpg'), class: "image-backgrounds" %>
+    </div>
+  </div>
+</div>
+</div>
+<div class="animated rollIn">
+  <% @brands.each do |brand| %>
+
+    <div class="card-width">
+      <div class="card">
+        <div class="columns">
+
+          <div class="card-image">
+            <figure class="image is-128x128">
+              <% if brand.profile_image.attached? %>
+
+                <br>
+                <%= image_tag brand.profile_image %>
+
+              <% end %>
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48"></figure>
+              </div>
+              <div class="media-content">
+                <div>
+                  Name:
+                  <%= brand.name %>
+                </div>
+                <br>
+                <br>
+                <div>
+                  Skills And Interests:
+                  <%= brand.description %>
+                </div>
+
+                <br>
+                <br>
+                <div>
+                  Age:
+                  <%= brand.skills_and_interests %>
+                </div>
+                <br>
+                <br>
+                <div>
+                  Charities And Causes:
+                  <%= brand.charities_and_causes %>
+                </div>
+                <a class="button is-success is-outlined" href="<%=edit_brand_path(brand)%>">Edit</a>
+                <a class="button is-danger is-outlined" href="<%=brand_path(brand)%>" data-method="DELETE">Delete</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+          <%end%>

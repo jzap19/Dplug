@@ -1,0 +1,57 @@
+<nav class="navbar is-active" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <h1>
+        PLugdIN
+      </h1>
+      <%= image_tag image_path('folder_1/dplug.png') %>
+    </a>
+
+    <!-- <div> <a role="button" class="navbar-burger is-active" aria-label="menu" aria-expanded="false"> <span aria-hidden="true"></span> <span aria-hidden="true"></span> <span aria-hidden="true"></span> </a> </div> -->
+
+    <div class="move-button">
+      <a class="navbar-item" href="/influencers_path">
+        <a class="button is-primary is-inverted is-outlined" href="/influencers">
+          <span class="icon">
+            <i class="fas fa-bullhorn" aria-hidden="true"></i>
+          </span>
+          <span>Influencers</span>
+        </a>
+      </a>
+    </div>
+    <div class="move-button1">
+      <a class="navbar-item" href="/brands_path">
+        <a class="button is-primary is-inverted is-outlined" href="/brands">
+          <span class="icon">
+            <i class="fab fa-black-tie" aria-hidden="true"></i>
+          </span>
+          <span>Brands</span>
+        </a>
+      </a>
+    </div>
+    <div class="move-button2">
+      <a class="navbar-item"href="/profiles_path">
+        <a class="button is-primary is-inverted is-outlined" href="/profiles">
+          <span class="icon">
+            <i class="fas fa-user-circle" aria-hidden="true"></i>
+          </span>
+          <span>Profile</span>
+        </a>
+      </a>
+    </div>
+    <div class="move-button3">
+      <a class="navbar-item">
+        <a class="button is-primary is-inverted is-outlined">
+          <span class="icon">
+            <i class="fas fa-search" aria-hidden="true"></i>
+          </span>
+          <span>
+            Search
+          </span>
+        </a>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<%= render 'form' %>

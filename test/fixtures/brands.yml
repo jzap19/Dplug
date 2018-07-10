@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  skills_and_interests: MyString
+  charities_and_causes: MyString
+
+two:
+  name: MyString
+  description: MyString
+  skills_and_interests: MyString
+  charities_and_causes: MyString

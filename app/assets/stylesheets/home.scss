@@ -1,0 +1,39 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.navbar {
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+.title {
+  font-family: 'Montserrat', sans-serif;
+}
+ h1 {
+  color: black;
+}
+.move-button {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  margin-left: 850px;
+}
+.move-button1 {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.move-button2 {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.move-button3 {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.box {
+  background-color: whitesmoke;
+}
+.navbar {
+  position: sticky;
+}

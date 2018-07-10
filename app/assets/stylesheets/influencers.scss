@@ -1,0 +1,59 @@
+// Place all the styles related to the Influencers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.your-text {
+  margin-top: 400px;
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  z-index: 2;
+}
+
+.title {
+  color: #f8f8f8;
+}
+
+.subtitle {
+  color: red;
+}
+
+.index {
+  margin-top: 1px;
+  margin-left: 14px;
+  z-index:0;
+}
+
+.card-width {
+  width: 33%;
+  margin-left: 10%;
+  margin-top: 10px;
+}
+
+.card-image {
+  margin-left: 30px;
+  margin-top: 80px;
+}
+
+.media-content {
+  margin-top: 80px;
+}
+
+.is-danger {
+  margin-top: 5px;
+}
+
+.is-success {
+  margin-top: 5px;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  box-shadow: 1px 1px 1px 1px darkgray;
+  top: 0;
+}
+
+.card {
+  box-shadow: 1px 1px 1px 1px darkgray;
+}

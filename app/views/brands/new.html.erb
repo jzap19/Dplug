@@ -1,0 +1,95 @@
+<nav class="navbar is-active" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <h1>
+        PLugdIN
+      </h1>
+      <%= image_tag image_path('folder_1/dplug.png') %>
+    </a>
+
+    <!-- <div> <a role="button" class="navbar-burger is-active" aria-label="menu" aria-expanded="false"> <span aria-hidden="true"></span> <span aria-hidden="true"></span> <span aria-hidden="true"></span> </a> </div> -->
+
+    <div class="move-button">
+      <a class="navbar-item" href="/influencers_path">
+        <a class="button is-primary is-inverted is-outlined" href="/influencers">
+          <span class="icon">
+            <i class="fas fa-bullhorn" aria-hidden="true"></i>
+          </span>
+          <span>Influencers</span>
+        </a>
+      </a>
+    </div>
+    <div class="move-button1">
+      <a class="navbar-item" href="/brands_path">
+        <a class="button is-primary is-inverted is-outlined" href="/brands">
+          <span class="icon">
+            <i class="fab fa-black-tie" aria-hidden="true"></i>
+          </span>
+          <span>Brands</span>
+        </a>
+      </a>
+    </div>
+    <div class="move-button2">
+      <a class="navbar-item" href="/profiles_path">
+        <a class="button is-primary is-inverted is-outlined" href="/profiles">
+          <span class="icon">
+            <i class="fas fa-user-circle" aria-hidden="true"></i>
+          </span>
+          <span>Profile</span>
+        </a>
+      </a>
+    </div>
+    <div class="move-button3">
+      <a class="navbar-item">
+        <a class="button is-primary is-inverted is-outlined">
+          <span class="icon">
+            <i class="fas fa-search" aria-hidden="true"></i>
+          </span>
+          <span>
+            Search
+          </span>
+        </a>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<%= form_for @brand do |f| %>
+<div class="card-width">
+  <div class="card">
+    <div class="columns">
+      <div class="card-image">
+        <figure class="image is-128x128">
+          <%= f.file_field :profile_image %>
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-left">
+            <figure class="image is-48x48"></figure>
+          </div>
+          <div class="media-content">
+            <%= f.label :name, class: 'label' %>
+            <%= f.text_field :name, class: 'input' %>
+            <br>
+            <br>
+            <%= f.label :description, class: 'label' %>
+            <%= f.text_area :description, class:'textarea' %>
+            <br>
+            <br>
+            <%= f.label :skills_and_interests, class: 'label' %>
+            <%= f.text_area :skills_and_interests, class:'textarea' %>
+            <br>
+            <br>
+            <%= f.label :charities_and_causes, class: 'label' %>
+            <%= f.text_area :charities_and_causes, class:'textarea' %>
+          </div>
+        </div>
+        <div>
+          <%= f.submit %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%end%>

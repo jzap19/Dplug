@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <nav class="navbar is-active" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <h1>
+            PLugdIN
+          </h1>
+          <%= image_tag image_path('folder_1/dplug.png') %>
+        </a>
+
+        <!-- <div> <a role="button" class="navbar-burger is-active" aria-label="menu" aria-expanded="false"> <span aria-hidden="true"></span> <span aria-hidden="true"></span> <span aria-hidden="true"></span> </a> </div> -->
+
+        <div class="move-button">
+          <a class="navbar-item" href="/influencers_path">
+            <a class="button is-primary is-inverted is-outlined"href="/influencers">
+              <span class="icon">
+                <i class="fas fa-bullhorn" aria-hidden="true"></i>
+              </span>
+              <span>Influencers</span>
+            </a>
+          </a>
+        </div>
+        <div class="move-button1">
+          <a class="navbar-item" href="/brands_path">
+            <a class="button is-primary is-inverted is-outlined" href="/brands">
+              <span class="icon">
+                <i class="fab fa-black-tie" aria-hidden="true"></i>
+              </span>
+              <span>Brands</span>
+            </a>
+          </a>
+        </div>
+        <div class="move-button2">
+          <a class="navbar-item" href="/profiles_path">
+            <a class="button is-primary is-inverted is-outlined" href="/profiles">
+              <span class="icon">
+                <i class="fas fa-user-circle" aria-hidden="true"></i>
+              </span>
+              <span>Profile</span>
+            </a>
+          </a>
+        </div>
+        <div class="move-button3">
+          <a class="navbar-item">
+            <a class="button is-primary is-inverted is-outlined">
+              <span class="icon">
+                <i class="fas fa-search" aria-hidden="true"></i>
+              </span>
+              <span>
+                Search
+              </span>
+            </a>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="shape">
+      <div class="your-text">
+        <h1 class="title is-1  $title-weight $weight-bold">Connect.
+          <br>
+          Empower.
+          <br>
+          Make A Difference.
+        </h1>
+        <h1 class="$subititle-strong-color $grey-darker $subtitle-weight $weight-normal subtitle is-3">
+          Take Advantage of your Reach.
+        </h1>
+        <div class="move-button4">
+          <a class=" index button is-dark is-inverted is-outlined" href="/influencers/new">
+            <span class="icon">
+              <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+            </span>
+            <span>Create Your Influencer</span>
+          </a>
+        </div>
+      </div>
+      <div class="animated fadeInUp">
+      <div class="video">
+        <video autoplay="autoplay" class="headerVideo" playsinline="" loop="loop" muted="">
+          <source src="https://d1etzo42hzm6vt.cloudfront.net/CI2/images/marketing-home-v2/video/CI_homepage_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+      </div>
+    </div>
+  </div>
+  <div class="animated rollIn">
+    <% @influencers.each do |influencer| %>
+
+      <div class="card-width">
+        <div class="card">
+
+          <div class="columns">
+            <div class="card-image">
+              <figure class="image is-128x128">
+
+                <% if influencer.profile_image.attached? %>
+
+                  <br>
+                  <%= image_tag influencer.profile_image %>
+
+                <% end %>
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <div>
+                    Name:
+                    <%= influencer.name %>
+                  </div>
+                  <br>
+                  <br>
+                  <div>
+                    Skills And Interests:
+                    <%= influencer.skills_and_interests %>
+                  </div>
+
+                  <br>
+                  <br>
+                  <div>
+                    Age:
+                    <%= influencer.age %>
+                  </div>
+                  <br>
+                  <br>
+                  <div>
+                    Gender:
+                    <%= influencer.gender %>
+                  </div>
+                  <br>
+                  <br>
+                  <div>
+                    Charities And Causes:
+                    <%= influencer.charities_and_causes %>
+                  </div>
+                  <a class="button is-success is-outlined" href="<%=edit_influencer_path(influencer)%>">Edit</a>
+                  <a class="button is-danger is-outlined" href="<%=influencer_path(influencer)%>" data-method="DELETE">Delete</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%end%>

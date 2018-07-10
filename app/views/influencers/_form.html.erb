@@ -1,0 +1,49 @@
+<%= form_for @influencer do |f| %>
+<div class="card-width">
+  <div class="card">
+    <div class="columns">
+      <div class="card-image">
+        <figure class="image is-128x128">
+          <%= f.file_field :profile_image %>
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-left">
+            <figure class="image is-48x48">
+            </figure>
+          </div>
+          <div class="media-content">
+            <%= f.label :name, class: 'label' %>
+            <%= f.text_field :name, class: 'input' %>
+            <br>
+            <br>
+            <%= f.label :skills_and_interests, class: 'label' %>
+            <%= f.text_area :skills_and_interests, class:'textarea' %>
+            <br>
+            <br>
+            <%= f.label :age, class: 'label' %>
+            <%= f.number_field :age %>
+            <br>
+            <br>
+            <%= radio_button_tag(:gender, "male") %>
+            <%= label_tag(:gender, "male") %>
+            <%= radio_button_tag(:gender, "female") %>
+            <%= label_tag(:gender, "female") %>
+            <%= radio_button_tag(:gender, "other") %>
+            <%= label_tag(:gender, "other") %>
+            <br>
+            <br>
+            <%= f.label :charities_and_causes %>
+            <%= f.text_area :charities_and_causes, class:'textarea' %>
+          </div>
+        </div>
+        <div>
+          <%= f.submit %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%end%>
