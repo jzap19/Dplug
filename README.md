@@ -1,24 +1,16 @@
-# README
+# Dplug
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Front-End and Back-End Application that allows influencers to be paired up with causes that they have an interest in order to drive traffic to brands. 
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+- Ruby on Rails App
+- Devise
+- Active Storage
+- Bulma CSS Framework
+- SQL Database
+- Font Awesome
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
