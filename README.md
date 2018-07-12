@@ -12,3 +12,5 @@ A Front-End and Back-End Application that allows influencers to be paired up wit
 - Bulma CSS Framework
 - SQL Database
 - Font Awesome
+
+
